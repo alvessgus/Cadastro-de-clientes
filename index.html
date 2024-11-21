@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Cadastro de Clientes</title>
+</head>
+<body>
+  <div class="formulario">
+    <h1 class="title">Cadastro de Clientes</h1>
+    
+    <div class="conteudo">
+      <form id="dataForm">
+        <div class="dados">
+          <label for="name">Nome:</label>
+          <input placeholder="Digite seu nome..." type="text" id="name" name="name" required>
+        </div> <!-- O "required" é pra deixar os campos obrigatorios aparece uma mensagem pedindo pra preencher-->
+
+        <div class="dados">
+          <label for="age">Idade:</label>
+          <input placeholder="Digite sua idade..." type="number" id="age" name="age" required>
+        </div>
+
+        <div class="dados">
+          <label for="email">E-mail:</label>
+          <input placeholder="exemplo@email.com" type="text" id="email" name="email" required>
+        </div>
+
+        <div class="dados"> <!-- Achei legal adicionar isso aqui -->
+          <label for="gender">Sexo:</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected>--Selecione a opção--</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Masculino">Masculino</option>
+          </select>
+        </div>
+
+        <div class="dados">
+          <button type="submit">Adicionar</button>
+        </div>
+      </form>
+    </div>
+    
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>E-mail</th>
+            <th>Sexo</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- aqui é onde vai aparecer as novas linhas da tabela "corpo da tabela" como o nome sugere kkkkk -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
